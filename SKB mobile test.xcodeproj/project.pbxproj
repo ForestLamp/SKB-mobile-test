@@ -14,6 +14,7 @@
 		9F1C0A7227A91B13006AAD3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C0A7027A91B13006AAD3D /* LaunchScreen.storyboard */; };
 		9F1C0A7C27A91BB3006AAD3D /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C0A7B27A91BB3006AAD3D /* MainScreen.swift */; };
 		9F8FD9AB27A923E40096A027 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FD9AA27A923E40096A027 /* Model.swift */; };
+		9FCDA75A27A9666700AC63CE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDA75927A9666700AC63CE /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9F1C0A7327A91B13006AAD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F1C0A7B27A91BB3006AAD3D /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		9F8FD9AA27A923E40096A027 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9FCDA75927A9666700AC63CE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				9F1C0A6727A91B11006AAD3D /* SceneDelegate.swift */,
 				9F8FD9AA27A923E40096A027 /* Model.swift */,
 				9F1C0A7B27A91BB3006AAD3D /* MainScreen.swift */,
+				9FCDA75927A9666700AC63CE /* CustomTableViewCell.swift */,
 				9F1C0A6B27A91B11006AAD3D /* Main.storyboard */,
 				9F1C0A6E27A91B13006AAD3D /* Assets.xcassets */,
 				9F1C0A7027A91B13006AAD3D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1C0A7C27A91BB3006AAD3D /* MainScreen.swift in Sources */,
+				9FCDA75A27A9666700AC63CE /* CustomTableViewCell.swift in Sources */,
 				9F1C0A6627A91B11006AAD3D /* AppDelegate.swift in Sources */,
 				9F1C0A6827A91B11006AAD3D /* SceneDelegate.swift in Sources */,
 				9F8FD9AB27A923E40096A027 /* Model.swift in Sources */,
