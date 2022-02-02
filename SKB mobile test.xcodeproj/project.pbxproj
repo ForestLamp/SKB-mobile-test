@@ -13,8 +13,9 @@
 		9F1C0A6F27A91B13006AAD3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C0A6E27A91B13006AAD3D /* Assets.xcassets */; };
 		9F1C0A7227A91B13006AAD3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1C0A7027A91B13006AAD3D /* LaunchScreen.storyboard */; };
 		9F1C0A7C27A91BB3006AAD3D /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C0A7B27A91BB3006AAD3D /* MainScreen.swift */; };
-		9F8FD9AB27A923E40096A027 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FD9AA27A923E40096A027 /* Model.swift */; };
 		9FCDA75A27A9666700AC63CE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDA75927A9666700AC63CE /* CustomTableViewCell.swift */; };
+		9FCDA75D27A96A3A00AC63CE /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDA75C27A96A3A00AC63CE /* ContactModel.swift */; };
+		9FCDA76A27A9805900AC63CE /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDA76927A9805900AC63CE /* AboutTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		9F1C0A7127A91B13006AAD3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F1C0A7327A91B13006AAD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F1C0A7B27A91BB3006AAD3D /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
-		9F8FD9AA27A923E40096A027 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9FCDA75927A9666700AC63CE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		9FCDA75C27A96A3A00AC63CE /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		9FCDA76927A9805900AC63CE /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +64,32 @@
 			children = (
 				9F1C0A6527A91B11006AAD3D /* AppDelegate.swift */,
 				9F1C0A6727A91B11006AAD3D /* SceneDelegate.swift */,
-				9F8FD9AA27A923E40096A027 /* Model.swift */,
+				9FCDA76327A9801400AC63CE /* CustomCell */,
+				9FCDA76027A97FB100AC63CE /* Model */,
+				9FCDA76927A9805900AC63CE /* AboutTableViewController.swift */,
 				9F1C0A7B27A91BB3006AAD3D /* MainScreen.swift */,
-				9FCDA75927A9666700AC63CE /* CustomTableViewCell.swift */,
 				9F1C0A6B27A91B11006AAD3D /* Main.storyboard */,
 				9F1C0A6E27A91B13006AAD3D /* Assets.xcassets */,
 				9F1C0A7027A91B13006AAD3D /* LaunchScreen.storyboard */,
 				9F1C0A7327A91B13006AAD3D /* Info.plist */,
 			);
 			path = "SKB mobile test";
+			sourceTree = "<group>";
+		};
+		9FCDA76027A97FB100AC63CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDA75C27A96A3A00AC63CE /* ContactModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FCDA76327A9801400AC63CE /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDA75927A9666700AC63CE /* CustomTableViewCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +164,10 @@
 			files = (
 				9F1C0A7C27A91BB3006AAD3D /* MainScreen.swift in Sources */,
 				9FCDA75A27A9666700AC63CE /* CustomTableViewCell.swift in Sources */,
+				9FCDA75D27A96A3A00AC63CE /* ContactModel.swift in Sources */,
 				9F1C0A6627A91B11006AAD3D /* AppDelegate.swift in Sources */,
 				9F1C0A6827A91B11006AAD3D /* SceneDelegate.swift in Sources */,
-				9F8FD9AB27A923E40096A027 /* Model.swift in Sources */,
+				9FCDA76A27A9805900AC63CE /* AboutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,37 +10,49 @@ import UIKit
 class MainScreen: UITableViewController {
 
     @IBOutlet weak var navigationBarOutlet: UINavigationItem!
-  
-    
-    let tableData = ["1","2","3","4","5","6","7"]
-    
-    enum themperament: String {
-        case Melancholic, Phlegmatic, Sanguine, Choleric
-    }
-    
+    private var contactMainScreen = [MainScreenContacts]()
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarOutlet.title = "Contacts"
+        fetchData()
+    }
+    
+    //MARK: - Fetch Data
+    
+    func  fetchData() {
+        let urlString = "https://raw.githubusercontent.com/ForestLamp/mobile-test-ios/master/json/generated-01.json"
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {return}
+                        do {
+                            self.contactMainScreen = try JSONDecoder().decode([MainScreenContacts].self, from: data)
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+            } catch let error {
+                print(error)
+            }
+        }.resume()
+    }
+    
+    private func configureCell(cell: CustomTableViewCell, for indexPath: IndexPath){
+        let contact = contactMainScreen[indexPath.row]
+        cell.nameLabel.text = contact.name
+        cell.phoneNumberLabel.text = contact.phone
+        cell.temperamentLabel.text = contact.temperament
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return contactMainScreen.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! CustomTableViewCell
-//        cell.textLabel?.text = tableData[indexPath.row]
-//        cell.detailTextLabel?.text = tableData[indexPath.row]
-        cell.temperamentLabel.text = themperament.Choleric.rawValue
-        cell.phoneNumberLabel.text = "+7 922 039 23 68"
-        cell.nameLabel.text = "Alex Chusovitin"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell") as! CustomTableViewCell
+        configureCell(cell: cell, for: indexPath)
         return cell
-    }
-
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Hi"
+        
     }
     
     // MARK: - TableWiew Delegate
@@ -56,5 +68,9 @@ class MainScreen: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+    }
+    
+    @IBAction func cancelAction(_ segue: UIStoryboardSegue){
+        
     }
 }
